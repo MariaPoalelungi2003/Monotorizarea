@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  color: #fff;
+  padding-top: 15px;
+  font-size: 20px;
+}
+body {
+  overflow-x: hidden; /* Ascunde bara de defilare orizontală */
+}
+
+.App{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('savana.jpg');
+  background-color: #333;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+}
+.navbar-logo img {
+  width: 50px; /* Ajustează dimensiunea logo-ului după necesitate */
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-right: 70px; /* Spațiul între elementele meniului */
+}
+h1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
+.navbar-link:hover {
+  color: #ccc; /* Schimbă culoarea la hover */
+}
+.site-title {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 20px; /* Adaugă spațiu între titlu și text */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-column img {
+  width: 100%;
+  height: auto;
+}
+.text1 {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.text {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 750px;
+  margin-left: 120px;
+  margin-right: -120px;
+}
+.text-app {
+  color: black;
+  flex: 1;
+  margin-right: 200px;
+  text-align: justify;
+  font-size: 20px;
+}
+.text-app1 {
+  color: black;
+  flex: 1;
+  margin-left: 200px;
+  text-align: justify;
+  font-size: 20px;
+}
+.text-img img{
+  max-width: 100%; /* Setează lățimea imaginii */
+  height: auto; /* Permiteți imaginii să-și mențină proporțiile */
+  margin-left: 200px;
+  width: 500px;
+  height: 500px;
+}
+.text-img img{
+  max-width: 100%; /* Setează lățimea imaginii */
+  height: auto; /* Permiteți imaginii să-și mențină proporțiile */
+  margin-right: 200px;
+  width: 500px;
+  height: 500px;
+}
+
+/* Restul stilurilor rămân neschimbate */
+
+.secondary-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 100px); /* Înălțimea totală a ferestrei minus înălțimea header-ului */
+  background-color: #fff; /* Culorează fundalul paginii secundare */
+}
+
+.left-column {
+  max-width: 600px; /* Setează lățimea maximă a textului */
+}
+
+.text {
+  color: #333; /* Schimbă culoarea textului pentru a contrasta cu fundalul */
+  text-align: center; /* Aliniază textul în centru */
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 1.5s ease-out;
+}
+.slide-in-left {
+  animation: slide-in-left 1.5s ease-out;
+}
+.text-img img.move {
+  transition: transform 1s ease; /* Definiți o tranziție pentru proprietatea transform */
+}
+@keyframes slide-in-right {
   from {
-    transform: rotate(0deg);
+    transform: translateX(100%);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
