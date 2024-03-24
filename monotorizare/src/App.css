@@ -124,7 +124,9 @@ h1 {
     transform: translateX(0);
   }
 }
-
+.text-app1 {
+  animation: slide 1.5s ease-out;
+}
 .slide-in-right {
   animation: slide-in-right 1.5s ease-out;
 }
@@ -134,7 +136,7 @@ h1 {
 .text-img img.move {
   transition: transform 1s ease; /* Definiți o tranziție pentru proprietatea transform */
 }
-@keyframes slide-in-right {
+@keyframes text-app1 {
   from {
     transform: translateX(100%);
   }
@@ -150,6 +152,9 @@ h1 {
     transform: translateX(0);
   }
 }
+
+
+
 .text-img {
   background-image: url('girafa_dreapta.png');
   background-size: cover; /* Asigură că imaginea se va potrivi în întregime div-ului */
