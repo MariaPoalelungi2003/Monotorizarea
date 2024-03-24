@@ -19,6 +19,7 @@ body {
   background-position: center;
   min-height: 100px;
 }
+
 .navbar-logo img {
   width: 50px; /* Ajustează dimensiunea logo-ului după necesitate */
 }
@@ -74,8 +75,8 @@ h1 {
   color: white;
   display: flex;
   align-items: center;
-  margin-top: 150px;
-  margin-left: 120px;
+  margin-top: 100px;
+  margin-left: 0px;
   margin-right: 120px;
 }
 .text {
@@ -84,7 +85,7 @@ h1 {
   align-items: center;
   margin-top: 750px;
   margin-left: 120px;
-  margin-right: -120px;
+  margin-right: 0px;
 }
 .text-app {
   color: black;
@@ -100,22 +101,6 @@ h1 {
   text-align: justify;
   font-size: 20px;
 }
-.text-img img{
-  max-width: 100%; /* Setează lățimea imaginii */
-  height: auto; /* Permiteți imaginii să-și mențină proporțiile */
-  margin-left: 200px;
-  width: 500px;
-  height: 500px;
-}
-.text-img img{
-  max-width: 100%; /* Setează lățimea imaginii */
-  height: auto; /* Permiteți imaginii să-și mențină proporțiile */
-  margin-right: 200px;
-  width: 500px;
-  height: 500px;
-}
-
-/* Restul stilurilor rămân neschimbate */
 
 .secondary-page {
   display: flex;
@@ -130,10 +115,7 @@ h1 {
   max-width: 600px; /* Setează lățimea maximă a textului */
 }
 
-.text {
-  color: #333; /* Schimbă culoarea textului pentru a contrasta cu fundalul */
-  text-align: center; /* Aliniază textul în centru */
-}
+
 @keyframes slide-in-right {
   0% {
     transform: translateX(100%);
@@ -167,4 +149,20 @@ h1 {
   to {
     transform: translateX(0);
   }
+}
+.text-img {
+  background-image: url('girafa_dreapta.png');
+  background-size: cover; /* Asigură că imaginea se va potrivi în întregime div-ului */
+  background-position: center; /* Așază imaginea în centrul div-ului */
+  width: 500px; /* Setează lățimea div-ului */
+  height: 500px; /* Setează înălțimea div-ului */
+  margin: 0 auto; /* Așază div-ul în centrul paginii */
+}
+.text-img1 {
+  background-image: url('girafa_stanga.png');
+  background-size: cover; /* Asigură că imaginea se va potrivi în întregime div-ului */
+  background-position: center; /* Așază imaginea în centrul div-ului */
+  width: 500px; /* Setează lățimea div-ului */
+  height: 550px; /* Setează înălțimea div-ului */
+  margin: 0 auto; /* Așază div-ul în centrul paginii */
 }

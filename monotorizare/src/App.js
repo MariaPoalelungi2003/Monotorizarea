@@ -23,19 +23,11 @@ function App() {
             setIsVisible(true);
         }
     };
-
-    // Efect secundar pentru a configura Intersection Observer
-    useEffect(() => {
-        const observer = new IntersectionObserver(handleIntersection);
-        observer.observe(document.querySelector('.text-img img'));
-        return () => observer.disconnect(); // Deconectați observatorul când componenta este demontată
-    }, []);
-
     const renderText = () => {
         return (
             <div className='alt_text'>
                 <div className='text'>
-                    <div className='text-app'>
+                    <div id='text-app' className='text-app'>
                         <h2>Imagine</h2>
                         Cu aceste stiluri, textul va fi afișat pe mai multe linii atunci când atinge marginea
                         containerului, împărțind cuvintele la sfârșitul liniei pentru a se încadra în spațiul
@@ -54,9 +46,7 @@ function App() {
                             <button onClick={handleButtonClick}>Apasă</button>
                         </div>
                     </div>
-                    <div className='text-img'>
-                        <img className={isVisible ? 'slide-in-right' : ''} src='https://i.pinimg.com/564x/93/88/de/9388de1969a0a631da9d9a8ef9311379.jpg' alt='Imagine' />
-                    </div>
+                    <div className='text-img'></div>
                 </div>
 
             </div>
@@ -67,12 +57,8 @@ function App() {
         return (
             <div className='alt_text'>
                 <div className='text1'>
-                    <div className='text-img1'>
-                        <img className={isVisible ? 'slide-in-left' : ''}
-                             src='https://i.pinimg.com/564x/36/15/4f/36154fab971b48e453c706150c380754.jpg'
-                             alt='Imagine'/>
-                    </div>
-                    <div className='text-app1'>
+                    <div className='text-img1'></div>
+                    <div id='text-app1' className='text-app1'>
                         <h2>Text</h2>
                         Cu aceste stiluri, textul va fi afișat pe mai multe linii atunci când atinge marginea
                         containerului, împărțind cuvintele la sfârșitul liniei pentru a se încadra în spațiul
@@ -116,10 +102,10 @@ function App() {
                         <a href="#" className="navbar-link">About Us</a>
                     </li>
                     <li className="navbar-item">
-                        <a href="#" className="navbar-link">Imagini</a>
+                        <a href="#text-app" className="navbar-link">Imagini</a>
                     </li>
                     <li className="navbar-item">
-                        <a href="#" className="navbar-link">Text</a>
+                        <a href="#text-app1" className="navbar-link">Text</a>
                     </li>
                     <li className="navbar-item">
                         <a href="#" className="navbar-link">Contact</a>
